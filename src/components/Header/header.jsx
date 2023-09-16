@@ -1,7 +1,12 @@
 import React from 'react';
 
-function Header() {
-    return <h1>Hello World!</h1>
+function Header(props) {
+    const { backgroundColor } = props;
+
+    const headerstyle = {
+        backgroundColor: backgroundColor,
+    };
+    return <h1 style={headerstyle}>Hello World!</h1>
 }
 
 export default Header;
