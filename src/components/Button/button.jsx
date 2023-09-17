@@ -1,20 +1,13 @@
-import React, { useState } from 'react';
-import Header from './Header/header.jsx';
+import React from "react";
 
-function Button() {
-    const [headerColor, setHeaderColor] = useState('lightblue');
-
-    const changeColor = () => {
-        const colorBlue = 'blue';
-        setHeaderColor(colorBlue);
-    };
+function Button(props) {
+   const { onClick } = props;
 
     return (
         <div>
-            <Header backgroundColor={headerColor} />
-            <button onClick={changeColor}>Change to Color Blue</button>
+            <button onClick={onClick}>Change Color to Blue</button>
         </div>
-    )
+    );
 }
 
 export default Button;
